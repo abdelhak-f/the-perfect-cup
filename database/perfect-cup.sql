@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `blog`
 --
 
+
 DROP TABLE IF EXISTS `blog`;
 CREATE TABLE IF NOT EXISTS `blog` (
   `id` int(25) NOT NULL AUTO_INCREMENT,
