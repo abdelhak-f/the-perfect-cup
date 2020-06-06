@@ -1,3 +1,6 @@
+<?php include("connect.php");?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="script.js"></script>
 
     <title>The Perfect Cup - Contact</title>
 
@@ -66,7 +70,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row"  >
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
@@ -75,23 +79,34 @@
                     </h2>
                     <hr>
                     <div id="add_err2"></div>
-                    <form role="form">
+                    <form role="form" method="POST" >
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Name</label>
-                                <input type="text" id="fname" name="fname" maxlength="25" class="form-control">
+                                <input type="text" id="fname" name="name" maxlength="25" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" id="email" name="email" maxlength="25" class="form-control">
+                                <input type="email" id="email" name="email_adresse" maxlength="25" class="form-control">
                             </div>
-                            <div class="clearfix"></div>
+
+                                 
+
+                            <div class="clearfi"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" id="message" name="message" maxlength="100" rows="6"></textarea>
+
+                            <div class="form-group col-lg-4">
+                                <label>Password</label>
+                                <input type="password" id="password" name="password" maxlength="25" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Confirm password</label>
+                                <input type="password" id="email" name="confirm_password" maxlength="25" class="form-control">
+                            </div>
+
                             </div>
                             <div class="form-group col-lg-12">
-                                <button type="submit" id="contact" class="btn btn-default">Submit</button>
+                                <button type="submit" id="contact" name="click" value="click" class="btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
