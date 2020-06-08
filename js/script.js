@@ -1,4 +1,4 @@
-function validate() { 
+/*function validate() { 
     var msg; 
     var str = document.getElementById("mdp").value; 
     if (str.match( /[0-9]/g) && 
@@ -15,4 +15,16 @@ function validate() {
 
 Entrez le mot de passe: <input id="mdp" /> 
 <button onclick="validate()">Valider</button><br>
-<span id="msg"></span> 
+<span id="msg"></span> */
+
+
+
+jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+});
+var form = $("#myform");
+form.validate();
+$("a").click(function () {
+    alert("Valid: " + form.valid());
+});

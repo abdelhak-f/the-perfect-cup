@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 
     <title>The Perfect Cup - Contact</title>
 
@@ -79,29 +79,29 @@
                     </h2>
                     <hr>
                     <div id="add_err2"></div>
-                    <form role="form" method="POST" >
+                    <form id="myform" role="form" method="POST" >
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>Name</label>
-                                <input type="text" id="fname" name="name" maxlength="25" class="form-control">
+                                <input type="text" id="fname" name="name" maxlength="25" class="form-control" required >
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" id="email" name="email_adresse" maxlength="25" class="form-control">
+                                <input type="email" id="email" name="email_adresse" maxlength="25" class="form-control" required >
                             </div>
 
-                                 
+                               
 
-                            <div class="clearfi"></div>
+                           <!-- <div class="clearfi"></div>-->
                             <div class="form-group col-lg-12">
 
                             <div class="form-group col-lg-4">
                                 <label>Password</label>
-                                <input type="password" id="password" name="password" maxlength="25" class="form-control">
+                                <input type="password" id="password" name="password" maxlength="25" class="form-control" required >
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Confirm password</label>
-                                <input type="password" id="email" name="confirm_password" maxlength="25" class="form-control">
+                                <input type="password" id="email" name="confirm_password" maxlength="25" class="form-control" required >
                             </div>
 
                             </div>
@@ -115,6 +115,20 @@
         </div>
 
     </div>
+<!-- script pour valider les champs de la forme  --
+    <script>
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+var form = $("#myform");
+form.validate();
+$("a").click(function() {
+  alert("Valid: " + form.valid());
+});
+    
+    </script>-->
+
     <!-- /.container -->
 
     <footer>
@@ -126,6 +140,8 @@
             </div>
         </div>
     </footer>
+
+   
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
