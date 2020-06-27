@@ -32,7 +32,24 @@
 
 <body>
 
-<?php include('navbar.php'); ?>
+    <?php
+    if (isset($_GET['logout'])){
+        if($_GET['logout']=="true"){?>
+
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>You have been logged out of the system</strong>
+    </div>
+
+    <?php
+        }
+
+    }
+    ?>
+
+
+    <!-- Navigation -->
+    <?php require_once 'navbar.php';?>
 
     <div class="container">
 
@@ -75,7 +92,7 @@
                     <hr class="tagline-divider">
                     <h2>
                         <small>By
-                            <strong>Nipuna Upeksha</strong>
+                            <strong>Pavel Pronin</strong>
                         </small>
                     </h2>
                 </div>
@@ -86,18 +103,16 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">HOW TO MAKE
-                        <strong>THE PERFECT CUP OF COFFEE</strong>
+                    <h2 class="intro-text text-center">How to make
+                        <strong>a perfect cup of coffee</strong>
                     </h2>
                     <hr>
                     <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
                     <hr class="visible-xs">
-                    <p>Making the perfect cup of coffee can be challenging! With so many unique flavours and recipes to choose from, where do you begin? Our website provide you with the best recipes around the world. Whether you prefer your coffee hot and
-                        mild or bracingly cold and strong - we are sure to have what you are looking for. For access to unlimited recipes you must register! Registration is free. Click here to get started!</p>
+                    <p>Making the perfect cup of coffee can be challenging! With so many unique flavours and recipes to choose from, where do you begin? Our website provides you with the best recipes from around the world. Whether you prefer your coffee hot and mild or bracingly cold and strong - we are sure to have what you are looking for. For access to unlimited recipes you must register! Registration is free. Click here to get started!</p>
                 </div>
             </div>
         </div>
-
 
 
     </div>
@@ -107,7 +122,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; The Perfect Cup 2019</p>
+                    <p>Copyright &copy; The Perfect Cup 2018</p>
                 </div>
             </div>
         </div>
@@ -121,9 +136,9 @@
 
     <!-- Script to Activate the Carousel -->
     <script>
-        $('.carousel').carousel({
-            interval: 5000 //changes the speed
-        })
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
     </script>
 
 </body>
