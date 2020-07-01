@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 27 juin 2020 à 22:44
+-- Généré le :  mer. 01 juil. 2020 à 16:31
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `perfectcup`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username_tip` varchar(11) NOT NULL,
+  `password_tip` varchar(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -64,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `members` (
   `email` varchar(25) NOT NULL,
   `password` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `members`
@@ -72,8 +86,7 @@ CREATE TABLE IF NOT EXISTS `members` (
 
 INSERT INTO `members` (`id`, `fname`, `lname`, `email`, `password`) VALUES
 (13, 'abdelhak', 'Faqir', 'abdelhakf95@gmail.com', '$2y$12$RzqCrc4LzKgYo/nnj90.q.TYrtfhd6O0xaVZJ9/xrSPDthJSJGNGy'),
-(14, 'youcode', 'youssoufia', 'youcode@gmail.com', '$2y$12$YBdvbGG.xn15vAPO9tJ2ZOsxbC3WNu8kTSSSF5cu9eGgESc/ATYOO'),
-(15, 'dawajin', 'abdo', 'ssss@kjj.com', '$2y$12$mcQRlfsEUTTVk6REeCofjepX/XKm8OR2bcA66Ex3rkCo98Ar465DK');
+(14, 'youcode', 'youssoufia', 'youcode@gmail.com', '$2y$12$YBdvbGG.xn15vAPO9tJ2ZOsxbC3WNu8kTSSSF5cu9eGgESc/ATYOO');
 
 -- --------------------------------------------------------
 
@@ -89,16 +102,18 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
   `pro_description` varchar(255) NOT NULL,
   `pro_info` varchar(250) NOT NULL,
   `pro_price` int(200) NOT NULL,
-  `_Date` date NOT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `tbl_product`
 --
 
-INSERT INTO `tbl_product` (`id`, `pro_title`, `pro_images`, `pro_description`, `pro_info`, `pro_price`, `_Date`) VALUES
-(1, 'bhekfbvkefv', 'WhatsApp Image 2020-06-26 at 01.07.30.jpeg', '                        nfdvnkejfhgejrkfgjrkern', '                        cbhsdbchjzddvhjb', 11, '2020-06-27');
+INSERT INTO `tbl_product` (`id`, `pro_title`, `pro_images`, `pro_description`, `pro_info`, `pro_price`, `date`) VALUES
+(11, 'COCONUT OIL COFFEE', 'slide-1.jpg', '                Start your morning off with this great recipe for hot coffee with coconut oil and butter.        ', '                        ', 11, NULL),
+(12, 'IRISH COFFEE', 'slide-2.jpg', '                Take the edge off with a Fresh hot cup of coffee made with Irish whiskey and Irish Cream.        ', '                        OCTOBER 13, 2013', 10, NULL),
+(13, 'FROZEN CARAMEL LATTE', 'slide-3.jpg', '                 Sweetened with caramel sauce and topped with whipped cream, this will make you happy any time of day.       ', '                        OCTOBER 13, 2013', 12, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

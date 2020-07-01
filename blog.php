@@ -59,7 +59,7 @@ if (isset($_SESSION['login'])) {
                     </h2>
                     <hr>
                 </div>
-                <div class="col-lg-12 text-center">
+                <div  class="col-lg-12 text-center">
                     <img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt="">
                     <h2>COCONUT OIL COFFEE
                         <br>
@@ -192,7 +192,10 @@ if (isset($_SESSION['login'])) {
         </div>
 
     </div>
-    <!--    Modal-->
+
+
+
+    <!-- footer   Modal-->
     <footer>
         <div class="container">
             <div class="row">
@@ -212,6 +215,8 @@ if (isset($_SESSION['login'])) {
     </body>
 
     </html>
+
+    
 <?php
 
 
